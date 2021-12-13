@@ -99,9 +99,19 @@ img {
 
 @media screen and (max-width: 768px) {
   .home__hero-text-wrapper {
+    position: relative;
+    z-index: 1;
     padding-bottom: 65px;
   }
-
+  .heroImg {
+    width: 80vw;
+  }
+  .top-line {
+    color: #eee;
+  }
+  .home__hero-img {
+    margin-top: -15px;
+  }
   .col {
     max-width: 100%;
     flex-basis: 100%;
