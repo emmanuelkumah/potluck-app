@@ -57,8 +57,8 @@ function Hero({
                   className="heroImg"
                   alt="heroImage"
                 />
-                {/* <img src={img} alt={alt} className="home__hero-img " /> */}
               </div>
+              <img src={img} alt={alt} className="home__hero-img " />
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 .home__hero-section {
-  color: #fff;
-  padding: 160px 0;
+  /* color: #fff; */
+  padding: 100px 0;
   background: #fda7df;
 }
 
@@ -26,11 +26,10 @@
   flex-basis: 50%;
 }
 .heroImg {
-  /* display: inline; */
   position: absolute;
   width: 50%;
   top: 24px;
-  right: 11px;
+  right: 0px;
 }
 .home__hero-text-wrapper {
   max-width: 540px;
@@ -53,7 +52,8 @@
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: #f7f8fa;
+  color: #fff;
+  /* color: #041c32; */
 }
 
 .dark {
@@ -67,8 +67,9 @@
 .home__hero-subtitle {
   max-width: 440px;
   margin-bottom: 35px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 24px;
+  color: #000501;
 }
 
 .home__hero-img-wrapper {
@@ -76,11 +77,10 @@
 }
 
 .home__hero-img {
-  max-width: 95%;
+  position: relative;
+  max-width: 100%;
   margin-top: 0;
-  margin-right: 0;
-  margin-left: 10px;
-  padding-right: 0;
+  z-index: 2;
 }
 
 img {
