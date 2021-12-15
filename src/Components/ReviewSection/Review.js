@@ -1,30 +1,63 @@
 import React, { useState } from "react";
 import "./Review.css";
-import { reviews } from "./ReviewData.js";
+import reviews from "./ReviewData.js";
 import { FcPrevious, FcNext } from "react-icons/fc";
 
 function Review() {
   const [count, setCount] = useState(0);
-  //   console.log(reviews[count]);
-  let reviewData = reviews[count];
-  function getReview() {
-    setCount(count + 1);
-    // console.log(reviews[count]);
-    reviewData = reviews[count];
-  }
+
+  const { name, role, location, text, img } = reviews[count];
+
+  const checkCount = (num) => {
+    if (num > reviews.length - 1) {
+      return 0;
+    }
+    if (num < 0) {
+      return reviews.length - 1;
+    }
+    return num;
+    //  num > reviews.length - 1 ? return  0 :  return num;
+  };
+
+  const nextReview = () => {
+    setCount((count) => {
+      let newCount = count + 1;
+      return checkCount(newCount);
+    });
+  };
+
+  const prevReview = () => {
+    setCount((count) => {
+      let newCount = count - 1;
+      return checkCount(newCount);
+    });
+  };
+
   return (
     <>
       <section className="review__section">
-        <article className="review__container">
-          <h1>{reviewData.name} </h1>
+        <h1 className="review__title">What They Say</h1>
 
-          <p>
-            {reviewData.role} - {reviewData.location}
-          </p>
-          <p>{reviewData.text}</p>
-          <div>
-            <FcPrevious />
-            <FcNext />
+        <img
+          className="reviewImg"
+          src="/images/reviewBgImg.png"
+          alt="reviewImg"
+        />
+
+        <article className="review__container">
+          <img src={img} className="review__personImg" alt="reviewPerson" />
+          <div className="review__details">
+            <h1 className="review__heading">{name} </h1>
+
+            <p className="review__role">
+              <span>{role}</span>: {location}
+            </p>
+            <p className="review__desc">{text}</p>
+          </div>
+
+          <div className="review__icons">
+            <FcPrevious className="review__prevIcon" onClick={prevReview} />
+            <FcNext className="review__nextIcon" onClick={nextReview} />
           </div>
         </article>
       </section>

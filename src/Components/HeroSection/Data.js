@@ -3,7 +3,7 @@ export const homeHero = {
   lightText: false,
   lightTextDesc: true,
   topLine: "Did everyone bring pizza and burger ?",
-  headline: "Meals Cordinating Made Fun",
+  headline: "Meals Cordinating Made Fun and Simple",
   description:
     "Cordinate meals for your next office hangout, family gathering or street kitchen",
   buttonLabel: "Get Started",

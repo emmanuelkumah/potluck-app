@@ -10,7 +10,8 @@
   text-align: center;
 }
 .features__heading h1 {
-  font-size: 30px;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-size: 50px;
   background: #f61c04; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,

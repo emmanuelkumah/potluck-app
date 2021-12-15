@@ -12,13 +12,100 @@
     #c9ffbf
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+.review__title {
+  /* font-family: "Oleo Script Swash Caps", cursive; */
+  font-size: 50px;
+  text-align: center;
+  font-family: "Oleo Script Swash Caps", cursive;
+}
+.review__heading,
+.review__title {
+  font-family: "Oleo Script Swash Caps", cursive;
+  background: #f61c04; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f61c04,
+    #e614ae
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f61c04, #e614ae);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 20px;
+}
+.review__heading {
+  font-size: 30px;
+  text-align: center;
+}
 .review__container {
   /* border: 1px solid red; */
   background: #fff;
   border-radius: 10px;
   width: 50vw;
-  height: 300px;
+  height: auto;
   padding: 20px;
   margin: 30px auto;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.reviewImg {
+  position: absolute;
+}
+.review__personImg {
+  display: block;
+  width: 30%;
+  border-radius: 100%;
+  border: 10px solid #e63946;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review__desc,
+.review__role {
+  text-align: center;
+  font-family: "Kodchasan", sans-serif;
+}
+
+.review__role > span {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.review__role {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.review__icons {
+  text-align: center;
+  font-size: 40px;
+  /* color: #e63946; */
+}
+
+.review__prevIcon {
+  margin-right: 30px;
+}
+.review__prevIcon:hover,
+:focus,
+:active {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  transition: all 2s ease-in;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .reviewImg {
+    position: absolute;
+    left: 10px;
+    height: 60%;
+  }
+  .review__container {
+    position: relative;
+    width: 80vw;
+    z-index: 1;
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .review__container {
+    position: relative;
+    z-index: 1;
+  }
 }

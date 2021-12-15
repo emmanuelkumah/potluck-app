@@ -9,7 +9,7 @@ import {
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa";
-import { MdFingerprint, MdOutlineFastfood } from "react-icons/md";
+import { MdOutlineFastfood } from "react-icons/md";
 
 function Footer() {
   return (
