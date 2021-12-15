@@ -11,9 +11,9 @@ import {
 } from "react-icons/fa";
 import { MdOutlineFastfood } from "react-icons/md";
 
-function Footer() {
+function Footer({ id }) {
   return (
-    <footer className="footer-container">
+    <footer className="footer-container" id={id}>
       <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">

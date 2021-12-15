@@ -7,10 +7,10 @@ import {
   MdEmojiFoodBeverage,
 } from "react-icons/md";
 
-function Features() {
+function Features({ id }) {
   return (
     <>
-      <section className="features__section">
+      <section className="features__section" id={id}>
         <div className="features__heading">
           <h1>Bring & Share </h1>
           <p>Little ways to find great joy</p>

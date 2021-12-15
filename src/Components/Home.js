@@ -8,12 +8,10 @@ import Review from "./ReviewSection/Review";
 function Home() {
   return (
     <div>
-      <Hero {...homeHero} />
-      <main>
-        <Features />
-        <Review />
-      </main>
-      <Footer />
+      <Hero {...homeHero} id="hero" />
+      <Features id="features" />
+      <Review id="review" />
+      <Footer id="contact" />
     </div>
   );
 }

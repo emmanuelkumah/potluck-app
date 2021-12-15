@@ -39,13 +39,13 @@
 
 .top-line {
   color: #f00946;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 16px;
-  font-family: "Kodchasan", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .heading {

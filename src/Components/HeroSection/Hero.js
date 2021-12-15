@@ -14,10 +14,12 @@ function Hero({
   img,
   alt,
   imgStart,
+  id,
 }) {
   return (
     <div>
       <div
+        id={id}
         className={lightBg ? "home__hero-section" : "home__hero-section darkBg"}
       >
         <div className="container">

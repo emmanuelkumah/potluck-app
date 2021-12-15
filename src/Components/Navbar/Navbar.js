@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { MdOutlineFastfood } from "react-icons/md";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
@@ -10,6 +11,11 @@ import Button from "../Button";
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+
+  //Scroll to top of page
+  const handleScrollTop = () => {
+    scroll.scrollToTop();
+  };
 
   const handleClick = () => {
     setClick(!click);
@@ -41,20 +47,34 @@ function Navbar() {
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
               Pot_Belly
-              <MdOutlineFastfood />
+              <MdOutlineFastfood onClick={handleScrollTop} />
             </Link>
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
-                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                <Link
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  to="hero"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+                >
                   Home
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  to="/about"
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  to="features"
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
@@ -63,7 +83,26 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <Link
-                  to="/contact"
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  to="review"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+                >
+                  Reviews
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  to="contact"
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >

@@ -3,7 +3,7 @@ import "./Review.css";
 import reviews from "./ReviewData.js";
 import { FcPrevious, FcNext } from "react-icons/fc";
 
-function Review() {
+function Review({ id }) {
   const [count, setCount] = useState(0);
 
   const { name, role, location, text, img } = reviews[count];
@@ -35,7 +35,7 @@ function Review() {
 
   return (
     <>
-      <section className="review__section">
+      <section className="review__section" id={id}>
         <h1 className="review__title">What They Say</h1>
 
         <img
