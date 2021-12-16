@@ -1,4 +1,5 @@
 import React from "react";
+import "./Form.css";
 
 function FormDetails() {
   return (
@@ -10,7 +11,8 @@ function FormDetails() {
             type="text"
             placeholder="Please enter the event name"
             id="eventName"
-            aria-describedby="emailHelp"
+            aria-describedby="eventName"
+            className="input"
           />
         </div>
         <div>
@@ -19,21 +21,13 @@ function FormDetails() {
             type="text"
             placeholder="Please enter the event location"
             id="eventLocation"
-            aria-describedby="emailHelp"
+            aria-describedby="location"
+            className="input"
           />
         </div>
-        <div>
-          <label htmlFor="eventLocation">Location</label>
-          <input
-            type="text"
-            placeholder="Please enter the event location"
-            id="eventLocation"
-            aria-describedby="emailHelp"
-          />
-        </div>
-        <div>
-          <label htmlFor="datetime">Event (date and time):</label>
 
+        <div className="eventDate">
+          <label htmlFor="datetime">When:</label>
           <input type="datetime-local" name="datetime" id="datetime" />
         </div>
         <div>

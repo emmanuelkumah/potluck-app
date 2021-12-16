@@ -17,12 +17,19 @@
   left: 50%;
   margin: 20px;
   padding: 10px 0px;
-  width: 100%;
+  width: 80%;
 }
 input:focus {
   outline: none;
 }
 
+.eventDate {
+  float: left;
+}
+
+input[type="datetime-local"] {
+  margin-left: 34px;
+}
 textarea {
   margin-top: 20px;
   margin-left: auto;
