@@ -1,15 +1,36 @@
 import React from "react";
 import StepZilla from "react-stepzilla";
-import FormCaption from "./FormCaption";
-import FormDetails from "./FormDetails";
-import FormDetailsNext from "./FormDetailsNext";
+import EventTitle from "./EventTitle";
+import EventDetails from "./EventDetails";
+import EventDish from "./EventDish";
 
-const steps = [
-  { name: "Caption", component: <FormCaption /> },
-  { name: "Detials", component: <FormDetails /> },
-  { name: "Lists", component: <FormDetailsNext /> },
-];
-function MultiSteps() {
+function MultiSteps({ formData, handleInputChange, handleFormSubmit }) {
+  const steps = [
+    {
+      name: "Caption",
+      component: <EventTitle />,
+    },
+    {
+      name: "Detials",
+      component: (
+        <EventDetails
+          formData={formData}
+          handleInputChange={handleInputChange}
+        />
+      ),
+    },
+    {
+      name: "Dish",
+      component: (
+        <EventDish
+          formData={formData}
+          handleInputChange={handleInputChange}
+          handleFormSubmit={handleFormSubmit}
+        />
+      ),
+    },
+  ];
+
   return (
     <div className="step-progress">
       <StepZilla steps={steps} />

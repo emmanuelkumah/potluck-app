@@ -1,6 +1,6 @@
 import React from "react";
 
-function FormCaption() {
+function EventTitle() {
   return (
     <div>
       <h1>Organizing meals made swift</h1>
@@ -9,4 +9,4 @@ function FormCaption() {
   );
 }
 
-export default FormCaption;
+export default EventTitle;

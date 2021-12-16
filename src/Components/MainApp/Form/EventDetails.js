@@ -1,34 +1,45 @@
 import React from "react";
 import "./Form.css";
 
-function FormDetails() {
+function EventDetails({ formData, handleInputChange }) {
   return (
     <div>
       <form>
         <div>
           <label htmlFor="eventName">Name</label>
           <input
+            className="input"
             type="text"
             placeholder="Please enter the event name"
             id="eventName"
             aria-describedby="eventName"
-            className="input"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
           />
         </div>
         <div>
           <label htmlFor="eventLocation">Location</label>
           <input
+            className="input"
             type="text"
+            name="location"
             placeholder="Please enter the event location"
             id="eventLocation"
             aria-describedby="location"
-            className="input"
+            value={formData.location}
+            onChange={handleInputChange}
           />
         </div>
 
         <div className="eventDate">
           <label htmlFor="datetime">When:</label>
-          <input type="datetime-local" name="datetime" id="datetime" />
+          <input
+            type="datetime-local"
+            name="date"
+            id="datetime"
+            onChange={handleInputChange}
+          />
         </div>
         <div>
           <label htmlFor="notes"></label>
@@ -37,6 +48,9 @@ function FormDetails() {
             col="20"
             placeholder="Any other comment"
             id="notes"
+            name="comment"
+            value={formData.comment}
+            onChange={handleInputChange}
           />
         </div>
       </form>
@@ -44,4 +58,4 @@ function FormDetails() {
   );
 }
 
-export default FormDetails;
+export default EventDetails;
