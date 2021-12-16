@@ -9144,6 +9144,11 @@ react-scroll@^1.8.4:
     lodash.throttle "^4.1.1"
     prop-types "^15.7.2"
 
+react-stepzilla@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/react-stepzilla/-/react-stepzilla-7.0.0.tgz#cea91c5ff0fe6425da2939980559ec6bf296e987"
+  integrity sha512-8SbVrNyCvVIewC1NcolmcxXE7lP4U38+5fQRa5jfXEv3AscOZikS9Z2DsTOWjL2F9VFy/YHb8pZe3p3BkRquPw==
+
 react@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
