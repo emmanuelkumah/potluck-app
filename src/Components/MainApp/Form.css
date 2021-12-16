@@ -1,0 +1,36 @@
+.form__control {
+  margin: 20px;
+}
+.form__control input {
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  color: #041c32;
+  box-sizing: border-box;
+  font-size: 19px;
+  height: 50px;
+  left: 50%;
+  margin: 20px;
+  padding: 10px 0px;
+  width: 100%;
+}
+input:focus {
+  outline: none;
+}
+
+textarea {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 10px;
+}
+textarea:focus {
+  outline: none;
+  font-size: 20px;
+}

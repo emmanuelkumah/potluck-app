@@ -82,12 +82,12 @@
 .review__prevIcon {
   margin-right: 30px;
 }
-.review__prevIcon:hover,
+/* .review__prevIcon:hover,
 :focus,
 :active {
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   transition: all 2s ease-in;
-}
+} */
 
 @media (min-width: 481px) and (max-width: 767px) {
   .reviewImg {
