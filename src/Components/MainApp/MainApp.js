@@ -4,6 +4,7 @@ import "./MainApp.css";
 import "../../css/hover.css";
 
 function MainApp() {
+  const [events, setEvents] = useState([]);
   const [formData, setFormData] = useState([
     {
       name: "",
