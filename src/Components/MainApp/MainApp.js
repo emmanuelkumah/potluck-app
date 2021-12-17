@@ -72,8 +72,8 @@ function MainApp() {
             </div>
           </div>
         </div>
-        <main>
-          <h1>this is the main section</h1>
+        <main className="events__container">
+          <h1 className="event__caption">One Meal, Many Participants</h1>
           <EventCard events={events} />
         </main>
       </section>

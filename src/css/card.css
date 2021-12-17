@@ -1,5 +1,4 @@
 .event__card__container {
-  border: 1px solid yellow;
   display: flex;
   flex-wrap: wrap;
   margin-left: 40px;
@@ -19,15 +18,56 @@
 }
 .event__card__content {
   /* Take available height */
+  padding-left: 10px;
+  padding-right: 10px;
   flex: 1;
 }
-.event__icon {
-  background: red;
+.delete__icon,
+.edit__icon,
+.like__icon {
+  background: #f5f5f5;
   border-radius: 50%;
-  padding: 10px;
   position: relative;
-  left: 300px;
+  padding: 10px;
   top: -30px;
+  font-size: 50px;
+}
+.delete__icon {
+  left: 30px;
+}
+.edit__icon {
+  left: 100px;
+}
+.like__icon {
+  left: 170px;
+}
+.like__icon:hover,
+.delete__icon:hover,
+.edit__icon:hover {
+  background: #cdcdcd;
+}
+.event__card__name {
+  color: #2f131e;
+  font-size: 20px;
+  padding-top: 30px;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+.event__card__location {
+  color: #011627;
+  /* font-weight: 600; */
+}
+.event__card__dish {
+  /* font-weight: 700; */
+  font-family: "Fuzzy Bubbles", cursive;
+  color: #2f131e;
+  padding-right: 10px;
+  font-size: 16px;
+}
+p {
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-size: 16px;
 }
 
 img {

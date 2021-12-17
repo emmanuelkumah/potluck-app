@@ -1,29 +1,74 @@
 import React from "react";
 import "../../css/card.css";
 import "../../css/hover.css";
-import { AiOutlineLike } from "react-icons/ai";
+import { AiOutlineLike, AiOutlineDelete } from "react-icons/ai";
+import { BiDish, BiNote } from "react-icons/bi";
+import { BsFillPinMapFill } from "react-icons/bs";
+import {
+  MdOutlineEmojiFoodBeverage,
+  MdOutlineCake,
+  MdOutlineFastfood,
+} from "react-icons/md";
+import { FiEdit } from "react-icons/fi";
 import { IconContext } from "react-icons/lib";
 
 function EventCard({ events }) {
   return (
-    <IconContext.Provider value={{ color: "blue", size: "50px" }}>
+    <IconContext.Provider value={{ color: "#011627" }}>
       <div className="event__card__container">
         {events.map((event) => (
           <div className="event__card__item hvr-hang">
             <div className="event__card__cover">
               <img src="/images/eventImage.jpg" alt="eventCover" />
 
-              <AiOutlineLike className="event__icon" />
+              <AiOutlineDelete className="delete__icon" />
+              <FiEdit className="edit__icon" />
+              <AiOutlineLike className="like__icon " />
             </div>
             <div className="event__card__content">
-              <h4>{event.name}</h4>
+              <h3 className="event__card__name">{event.name}</h3>
               <p>{event.date}</p>
-              <h6>{event.location}</h6>
-              <p>{event.mainDish}</p>
-              <p>{event.sideDish}</p>
-              <p>{event.beverage}</p>
-              <p>{event.dessert}</p>
-              <p>{event.comment}</p>
+              <p className="event__card__location">
+                <BsFillPinMapFill
+                  style={{ fontSize: "20px", marginRight: "5px" }}
+                />
+                {event.location}
+              </p>
+
+              <p>
+                <BiDish style={{ fontSize: "20px", marginRight: "5px" }} />
+
+                <span className="event__card__dish">Main Dish:</span>
+                {event.mainDish}
+              </p>
+              <p>
+                <MdOutlineFastfood
+                  style={{ fontSize: "20px", marginRight: "5px" }}
+                />
+
+                <span className="event__card__dish">Side Dish:</span>
+                {event.sideDish}
+              </p>
+              <p>
+                <MdOutlineEmojiFoodBeverage
+                  style={{ fontSize: "20px", marginRight: "5px" }}
+                />
+
+                <span className="event__card__dish">Beverage:</span>
+                {event.beverage}
+              </p>
+              <p>
+                <MdOutlineCake
+                  style={{ fontSize: "20px", marginRight: "5px" }}
+                />
+                <span className="event__card__dish">Dessert:</span>
+                {event.dessert}
+              </p>
+              <p>
+                <BiNote style={{ fontSize: "20px", marginRight: "5px" }} />
+                <span className="event__card__dish">Note:</span>
+                {event.comment}
+              </p>
             </div>
           </div>
         ))}

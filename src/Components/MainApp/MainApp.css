@@ -1,5 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Kodchasan:wght@200&family=Montserrat+Alternates:wght@100;300;500&family=Poppins:wght@100;400;600&display=swap");
 .app__section {
-  background: #f1faee;
   /* width: 100vw; */
   height: 100vh;
 }
@@ -22,6 +22,18 @@
 .app__caption {
   margin: 20px;
   text-align: center;
+}
+/* Events Section */
+.events__container {
+  margin-top: 80px;
+  background: #f4dbd8;
+}
+.event__caption {
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+  padding: 60px 30px;
+  line-height: 19px;
 }
 
 .stepsWrapper {
