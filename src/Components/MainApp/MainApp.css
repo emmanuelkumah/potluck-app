@@ -30,7 +30,8 @@
 }
 
 .footer-buttons {
-  margin-top: 20px;
+  margin-top: 63px;
+  margin-bottom: 40px;
 }
 
 button#prev-button {
@@ -118,3 +119,4 @@ ol.progtrckr li.progtrckr-done:before {
 ol.progtrckr li.progtrckr-done:hover:before {
   color: #333;
 }
+/* Event Card */

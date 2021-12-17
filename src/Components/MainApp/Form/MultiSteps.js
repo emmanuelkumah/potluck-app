@@ -4,7 +4,7 @@ import EventTitle from "./EventTitle";
 import EventDetails from "./EventDetails";
 import EventDish from "./EventDish";
 
-function MultiSteps({ formData, handleInputChange, handleFormSubmit }) {
+function MultiSteps({ formData, handleInputChange }) {
   const steps = [
     {
       name: "Caption",
@@ -22,11 +22,7 @@ function MultiSteps({ formData, handleInputChange, handleFormSubmit }) {
     {
       name: "Dish",
       component: (
-        <EventDish
-          formData={formData}
-          handleInputChange={handleInputChange}
-          handleFormSubmit={handleFormSubmit}
-        />
+        <EventDish formData={formData} handleInputChange={handleInputChange} />
       ),
     },
   ];
