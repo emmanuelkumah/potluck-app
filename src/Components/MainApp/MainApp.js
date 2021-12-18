@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MultiSteps from "./Form/MultiSteps";
 import "../../css/MainApp.css";
 import "../../css/hover.css";
 import EventCard from "./EventCard";
+import { db } from "../../firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 function MainApp() {
   const [events, setEvents] = useState([]);
@@ -17,6 +19,21 @@ function MainApp() {
     beverage: "Orange juice",
   });
 
+  //Firebase connection
+
+  //access the collection
+  const eventsCollectionRef = collection(db, "potluck");
+  useEffect(() => {
+    //create event function
+    const getEvents = async () => {
+      //access the data
+      const data = await getDocs(eventsCollectionRef);
+      setEvents(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getEvents();
+  }, []);
+
+  console.log("data", db);
   //handle input change
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -27,25 +44,25 @@ function MainApp() {
     });
   };
 
-  const addEvent = () => {
-    setEvents([...events, formData]);
-  };
+  // const addEvent = () => {
+  //   setEvents([...events, formData]);
+  // };
 
   //handle form submission
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    addEvent();
-    //reset form
-    setFormData({
-      name: "",
-      location: "",
-      date: "",
-      comment: "",
-      mainDish: "",
-      sideDish: "",
-      dessert: "",
-      beverage: "",
-    });
+    // addEvent();
+    // //reset form
+    // setFormData({
+    //   name: "",
+    //   location: "",
+    //   date: "",
+    //   comment: "",
+    //   mainDish: "",
+    //   sideDish: "",
+    //   dessert: "",
+    //   beverage: "",
+    // });
   };
 
   console.log(events);

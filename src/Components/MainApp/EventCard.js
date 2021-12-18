@@ -17,7 +17,7 @@ function EventCard({ events }) {
     <IconContext.Provider value={{ color: "#011627" }}>
       <div className="event__card__container">
         {events.map((event) => (
-          <div className="event__card__item hvr-hang">
+          <div key={event.id} className="event__card__item hvr-hang">
             <div className="event__card__cover">
               <img
                 className="eventImg"
