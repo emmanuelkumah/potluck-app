@@ -38,6 +38,7 @@ function EventDish({ formData, handleInputChange }) {
       </div>
       <div>
         <label htmlFor="dessert">Dessert</label>
+
         <input
           className="input"
           type="text"
@@ -48,11 +49,11 @@ function EventDish({ formData, handleInputChange }) {
         />
       </div>
       <div>
-        <label htmlFor="notes"></label>
+        <label htmlFor="notes">Note</label>
         <textarea
           rows="5"
           col="10"
-          placeholder="Any other comment"
+          placeholder="Add additaonal notes"
           id="notes"
           name="comment"
           value={formData.comment}

@@ -2,10 +2,10 @@ export const homeHero = {
   lightBg: true,
   lightText: false,
   lightTextDesc: true,
-  topLine: "Did everyone bring pizza and burger ?",
-  headline: "Meals Cordinating Made Fun and Simple",
+  topLine: "A helping hand, makes a great gathering !",
+  headline: "Meals Preparation Made Fun and Simple",
   description:
-    "Cordinate meals for your next office hangout, family gathering or street kitchen",
+    "Cordinate meals for your next office hangout, an ailing friend or a street kitchen",
   buttonLabel: "Get Started",
   imgStart: "",
   img: "images/burger.png",

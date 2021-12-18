@@ -1,58 +1,54 @@
 import React from "react";
-import "./Features.css";
-// import { IoFastFoodOutline } from "react-icons/";
-import {
-  MdOutlineNoFood,
-  MdFastfood,
-  MdEmojiFoodBeverage,
-} from "react-icons/md";
+import "../../css/Features.css";
+import { MdOutlineNoFood } from "react-icons/md";
+import { AiOutlineSmile } from "react-icons/ai";
+import { BiDish } from "react-icons/bi";
 
 function Features({ id }) {
   return (
     <>
       <section className="features__section" id={id}>
         <div className="features__heading">
-          <h1>Bring & Share </h1>
-          <p>Little ways to find great joy</p>
+          <h2 className="features__title">Bring & Cook </h2>
+          <p>Little ways to find great joy, cooking together</p>
         </div>
 
         <div className="cards">
-          <div className="cards__item hvr-float-shadow">
+          <div className="cards__item ">
             <div>
               <div className="card__cover">
-                <MdFastfood className="card__icon" />
+                <BiDish className="card__icon" />
               </div>
-              <h1 className="card__title">Show Love</h1>
+              <h3 className="card__title">Helping Hand</h3>
               <p className="card__content">
-                Easily allow friends to indicate what they would love to bring
-                at the next office meet up
+                Join a friend to cook for your next office hangout, game night
+                and family gathering
               </p>
             </div>
           </div>
-          <div className="cards__item hvr-float-shadow">
+          <div className="cards__item">
             <div>
               <div className="card__cover">
                 <MdOutlineNoFood className="card__icon" />
               </div>
 
-              <h1 className="card__title">No Boring Meals</h1>
-              <div className="card__content">
-                <p>
-                  Show your co-workers, your boss and family who is boss, when
-                  it comes to cooking !
-                </p>
-              </div>
+              <h3 className="card__title">No Junk Meals</h3>
+
+              <p className="card__content">
+                No more burger and pizza, participants joins hands cook healthy
+                meals in a relaxed atmosphere
+              </p>
             </div>
           </div>
-          <div className="cards__item hvr-float-shadow">
+          <div className="cards__item ">
             <div>
               <div className="card__cover">
-                <MdEmojiFoodBeverage className="card__icon" />
+                <AiOutlineSmile className="card__icon" />
               </div>
-              <h1 className="card__title">Who brings what</h1>
+              <h3 className="card__title">Create Memories</h3>
               <p className="card__content">
-                View what your office colleague plans to brings and see how you
-                can help make this group meals a great suceess
+                Let your colleagues know you are a chef, dazzle them with your
+                culinary skills and create lasting memories
               </p>
             </div>
           </div>

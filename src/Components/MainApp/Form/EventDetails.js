@@ -1,5 +1,5 @@
 import React from "react";
-import "./Form.css";
+import "../../../css/Form.css";
 
 function EventDetails({ formData, handleInputChange }) {
   return (

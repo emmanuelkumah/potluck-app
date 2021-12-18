@@ -23,6 +23,19 @@
   margin: 20px;
   text-align: center;
 }
+.formSubmit {
+  background: #aa4465;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Montserrat Alternates", sans-serif;
+  padding: 10px;
+  border: none;
+}
+.formSubmit:hover {
+  background: #c1292e;
+  cursor: pointer;
+}
 /* Events Section */
 .events__container {
   margin-top: 80px;
@@ -132,3 +145,33 @@ ol.progtrckr li.progtrckr-done:hover:before {
   color: #333;
 }
 /* Event Card */
+
+/* Media Query for low resolution  Tablets, Ipads */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .app__container {
+    width: 80vw;
+  }
+  .app__bckgrndImg {
+    position: relative;
+    width: 100%;
+    left: -130px;
+  }
+  button#prev-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .event__caption {
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .app__container {
+    width: 80vw;
+  }
+  button#prev-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

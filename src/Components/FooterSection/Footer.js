@@ -17,24 +17,24 @@ function Footer({ id }) {
       <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
-            <h2>About</h2>
+            <h2 className="footer__text">About</h2>
             <Link to="/sign-up">How it works</Link>
             <Link to="/">Terms of Service</Link>
           </div>
           <div className="footer-link-items">
-            <h2>Be Part</h2>
+            <h2 className="footer__text">Be Part</h2>
             <Link to="/">Contact</Link>
             <Link to="/">Support</Link>
           </div>
         </div>
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
-            <h2>Resources</h2>
+            <h2 className="footer__text">Resources</h2>
             <Link to="/">Testimonials</Link>
             <Link to="/">Influencer</Link>
           </div>
           <div className="footer-link-items">
-            <h2>Social Media</h2>
+            <h2 className="footer__text">Social Media</h2>
             <Link to="/">Instagram</Link>
             <Link to="/">Facebook</Link>
           </div>

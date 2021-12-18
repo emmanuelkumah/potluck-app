@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MultiSteps from "./Form/MultiSteps";
-import "./MainApp.css";
+import "../../css/MainApp.css";
 import "../../css/hover.css";
 import EventCard from "./EventCard";
 
@@ -67,7 +67,11 @@ function MainApp() {
                   formData={formData}
                   handleInputChange={handleInputChange}
                 />
-                <input type="submit" onClick={handleFormSubmit} />
+                <input
+                  className="formSubmit"
+                  type="submit"
+                  onClick={handleFormSubmit}
+                />
               </form>
             </div>
           </div>

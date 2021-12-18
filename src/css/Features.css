@@ -23,6 +23,11 @@
   background-clip: text;
   color: transparent;
 }
+.features__title {
+  color: #041c32;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+}
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -50,6 +55,7 @@
   flex: 1;
   padding: 20px;
   color: #041c32;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 .card__icon {
   display: block;
@@ -59,14 +65,6 @@
   margin-right: auto;
   font-size: 80px;
   color: #041c32;
-}
-
-.hvr-float-shadow:hover,
-.hvr-float-shadow:focus,
-.hvr-float-shadow:active {
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
-  /* move the element up by 5px */
 }
 
 @media only screen and (max-width: 480px) {

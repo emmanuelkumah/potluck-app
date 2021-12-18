@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Review.css";
+import "../../css/Review.css";
 import reviews from "./ReviewData.js";
 import { FcPrevious, FcNext } from "react-icons/fc";
 
@@ -36,7 +36,7 @@ function Review({ id }) {
   return (
     <>
       <section className="review__section" id={id}>
-        <h1 className="review__title">What They Say</h1>
+        <h2 className="review__title">What They Say</h2>
 
         <img
           className="reviewImg"

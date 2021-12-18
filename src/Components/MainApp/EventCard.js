@@ -19,7 +19,11 @@ function EventCard({ events }) {
         {events.map((event) => (
           <div className="event__card__item hvr-hang">
             <div className="event__card__cover">
-              <img src="/images/eventImage.jpg" alt="eventCover" />
+              <img
+                className="eventImg"
+                src="/images/eventImage.jpg"
+                alt="eventCover"
+              />
 
               <AiOutlineDelete className="delete__icon" />
               <FiEdit className="edit__icon" />

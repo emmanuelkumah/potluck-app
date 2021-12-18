@@ -5,7 +5,7 @@ const reviews = [
     role: "host",
     location: "Accra Meet Up",
     text:
-      "Pretty impressive! Legit taste of burgers!!!,Potbelly saved the day.Great App",
+      "Pretty impressive!,Potbelly saved the day, meals were organized swiftly",
     img: "images/reviews_01.png",
   },
   {

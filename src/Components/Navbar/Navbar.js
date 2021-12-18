@@ -5,7 +5,7 @@ import { MdOutlineFastfood } from "react-icons/md";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 
-import "./Navbar.css";
+import "../../css/Navbar.css";
 import Button from "../Button";
 
 function Navbar() {
