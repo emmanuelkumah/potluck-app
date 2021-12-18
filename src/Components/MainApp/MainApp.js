@@ -4,19 +4,25 @@ import "../../css/MainApp.css";
 import "../../css/hover.css";
 import EventCard from "./EventCard";
 import { db } from "../../firebase";
-import { collection, getDocs } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+} from "firebase/firestore";
 
 function MainApp() {
   const [events, setEvents] = useState([]);
   const [formData, setFormData] = useState({
-    name: "Randy Birthday",
-    location: "Accra ",
-    date: "11/12/2021",
-    comment: "Let all be available",
-    mainDish: "Fufu and light soup",
-    sideDish: "Kelewele",
-    dessert: "Ice cream",
-    beverage: "Orange juice",
+    name: "",
+    location: "",
+    date: "",
+    comment: "",
+    mainDish: "",
+    sideDish: "",
+    dessert: "",
+    beverage: "",
   });
 
   //Firebase connection
@@ -33,7 +39,6 @@ function MainApp() {
     getEvents();
   }, []);
 
-  console.log("data", db);
   //handle input change
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -44,28 +49,34 @@ function MainApp() {
     });
   };
 
-  // const addEvent = () => {
-  //   setEvents([...events, formData]);
-  // };
+  //create Events
+  const createEvent = async () => {
+    await addDoc(eventsCollectionRef, { ...formData });
+  };
 
+  //delete Event
+  const deleteEvent = async (id) => {
+    const eventDocDelete = doc(db, "potluck", id);
+    await deleteDoc(eventDocDelete);
+  };
   //handle form submission
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    // addEvent();
-    // //reset form
-    // setFormData({
-    //   name: "",
-    //   location: "",
-    //   date: "",
-    //   comment: "",
-    //   mainDish: "",
-    //   sideDish: "",
-    //   dessert: "",
-    //   beverage: "",
-    // });
-  };
+    //add event
+    createEvent();
 
-  console.log(events);
+    //reset form
+    setFormData({
+      name: "",
+      location: "",
+      date: "",
+      comment: "",
+      mainDish: "",
+      sideDish: "",
+      dessert: "",
+      beverage: "",
+    });
+  };
 
   return (
     <>
@@ -95,7 +106,7 @@ function MainApp() {
         </div>
         <main className="events__container">
           <h1 className="event__caption">One Meal, Many Participants</h1>
-          <EventCard events={events} />
+          <EventCard events={events} deleteEvent={deleteEvent} />
         </main>
       </section>
     </>

@@ -12,7 +12,7 @@ import {
 import { FiEdit } from "react-icons/fi";
 import { IconContext } from "react-icons/lib";
 
-function EventCard({ events }) {
+function EventCard({ events, deleteEvent }) {
   return (
     <IconContext.Provider value={{ color: "#011627" }}>
       <div className="event__card__container">
@@ -25,7 +25,10 @@ function EventCard({ events }) {
                 alt="eventCover"
               />
 
-              <AiOutlineDelete className="delete__icon" />
+              <AiOutlineDelete
+                className="delete__icon"
+                onClick={() => deleteEvent(event.id)}
+              />
               <FiEdit className="edit__icon" />
               <AiOutlineLike className="like__icon " />
             </div>
