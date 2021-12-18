@@ -10,6 +10,7 @@ import {
   deleteDoc,
   doc,
   getDocs,
+  updateDoc,
 } from "firebase/firestore";
 
 function MainApp() {
@@ -24,6 +25,7 @@ function MainApp() {
     dessert: "",
     beverage: "",
   });
+  const [disableBtn, setDisableBtn] = useState(true);
 
   //Firebase connection
 
@@ -39,16 +41,6 @@ function MainApp() {
     getEvents();
   }, []);
 
-  //handle input change
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
   //create Events
   const createEvent = async () => {
     await addDoc(eventsCollectionRef, { ...formData });
@@ -59,9 +51,35 @@ function MainApp() {
     const eventDocDelete = doc(db, "potluck", id);
     await deleteDoc(eventDocDelete);
   };
+
+  //update Event
+  const updateEvent = async (id, event) => {
+    setFormData(event);
+    const eventDoc = doc(db, "potluck", id);
+    const eventUpdate = { ...formData };
+    await updateDoc(eventDoc, eventUpdate);
+  };
+
+  //handle input change
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    //disable submit button
+    if (e.target.value !== "") {
+      setDisableBtn(false);
+    }
+
+    //get form data
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
   //handle form submission
   const handleFormSubmit = (event) => {
     event.preventDefault();
+
     //add event
     createEvent();
 
@@ -95,18 +113,26 @@ function MainApp() {
                   formData={formData}
                   handleInputChange={handleInputChange}
                 />
-                <input
-                  className="formSubmit"
-                  type="submit"
-                  onClick={handleFormSubmit}
-                />
+                {disableBtn ? (
+                  ""
+                ) : (
+                  <input
+                    className="formSubmit"
+                    type="submit"
+                    onClick={handleFormSubmit}
+                  />
+                )}
               </form>
             </div>
           </div>
         </div>
         <main className="events__container">
           <h1 className="event__caption">One Meal, Many Participants</h1>
-          <EventCard events={events} deleteEvent={deleteEvent} />
+          <EventCard
+            events={events}
+            deleteEvent={deleteEvent}
+            updateEvent={updateEvent}
+          />
         </main>
       </section>
     </>
