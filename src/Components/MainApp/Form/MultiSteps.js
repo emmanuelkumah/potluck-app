@@ -11,7 +11,7 @@ function MultiSteps({ formData, handleInputChange }) {
       component: <EventTitle />,
     },
     {
-      name: "Detials",
+      name: "Details",
       component: (
         <EventDetails
           formData={formData}

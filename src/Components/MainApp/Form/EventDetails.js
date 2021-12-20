@@ -35,7 +35,7 @@ function EventDetails({ formData, handleInputChange }) {
         <label htmlFor="datetime">
           When:
           <input
-            type="datetime-local"
+            type="date"
             name="date"
             id="datetime"
             onChange={handleInputChange}

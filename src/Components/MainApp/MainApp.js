@@ -43,7 +43,7 @@ function MainApp() {
 
   //create Events
   const createEvent = async () => {
-    await addDoc(eventsCollectionRef, { ...formData });
+    await addDoc(eventsCollectionRef, { ...formData, count: 0 });
   };
 
   //delete Event
@@ -96,6 +96,13 @@ function MainApp() {
     });
   };
 
+  //increase likes
+  const increaseLikes = async (id, event) => {
+    const eventDoc = doc(db, "potluck", id);
+    const updateCount = { ...event, count: event.count + 1 };
+    await updateDoc(eventDoc, updateCount);
+  };
+
   return (
     <>
       <section className="app__section">
@@ -132,6 +139,7 @@ function MainApp() {
             events={events}
             deleteEvent={deleteEvent}
             updateEvent={updateEvent}
+            increaseLikes={increaseLikes}
           />
         </main>
       </section>
