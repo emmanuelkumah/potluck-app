@@ -45,7 +45,7 @@ function Hero({
                 >
                   {description}
                 </p>
-                <Link to="/sign-up">
+                <Link to="/app">
                   <Button buttonSize="btn--wide" buttonColor="blue">
                     {buttonLabel}
                   </Button>
