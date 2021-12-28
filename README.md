@@ -17,13 +17,13 @@ skills to cook the meal and enjoy together.
 - Share meails details on social media apps (whatsApp, Twitter)
 - Engage with event host (Like the event)
 
-### What I learnt 
-Pushing data to  Firebase firestore
-Reading event details from firestore
-Editing event details
-React routing 
-Building a multistep form
-Adding social sharing
+### What It entails
+- Pushing data to  Firebase firestore
+- Reading event details from firestore
+- Editing event details
+- React routing 
+- Building a multistep form
+- Adding social sharing
 
 ### How to run the app
 Git pull to your local repository 
