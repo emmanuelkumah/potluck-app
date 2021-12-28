@@ -53,6 +53,17 @@
   width: 90%;
   margin: 0 auto;
 }
+.homeBtn {
+  display: block;
+  margin: 20px auto;
+  background-color: #276fbf;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  padding: 8px;
+  color: #fff;
+  cursor: pointer;
+}
 
 .footer-buttons {
   margin-top: 63px;
@@ -157,6 +168,17 @@ ol.progtrckr li.progtrckr-done:hover:before {
   color: #333;
 }
 /* Event Card */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .app__container {
+    width: 80vw;
+  }
+  button#prev-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
 
 /* Media Query for low resolution  Tablets, Ipads */
 

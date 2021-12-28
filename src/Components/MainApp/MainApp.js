@@ -12,6 +12,7 @@ import {
   getDocs,
   updateDoc,
 } from "firebase/firestore";
+import { Link } from "react-router-dom";
 
 function MainApp() {
   const [events, setEvents] = useState([]);
@@ -106,6 +107,10 @@ function MainApp() {
   return (
     <>
       <section className="app__section">
+        <Link to="/">
+          <button className="homeBtn">Go home</button>
+        </Link>
+
         <div className="app__container">
           <img
             src="images/app_layer.png"

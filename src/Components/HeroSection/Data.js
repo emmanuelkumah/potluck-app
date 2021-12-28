@@ -3,9 +3,9 @@ export const homeHero = {
   lightText: false,
   lightTextDesc: true,
   topLine: "A helping hand, makes a great gathering !",
-  headline: "Meals Preparation Made Fun and Simple",
+  headline: "Meals Preparation, Fun and Stress Free",
   description:
-    "Cordinate meals for your next office hangout, an ailing friend or a street kitchen",
+    "Bring friends together, to cook delicious meals for your next office hangout, an ailing friend or a birthday party",
   buttonLabel: "Get Started",
   imgStart: "",
   img: "images/burger.png",
